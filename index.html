@@ -39,12 +39,12 @@
       </div>
 
       <div class="header-actions">
-        <button class="btn btn-ghost" type="button" data-jump="#sermon" aria-label="Jump to Watch Live section">
+        <button class="btn btn-ghost" type="button" data-jump="#visit" aria-label="Jump to Watch Live section">
           Contact
         </button>
-        <button class="btn btn-primary" type="button" data-jump="#visit" aria-label="Jump to Plan Your Visit section">
-          Directions
-        </button>
+        <a href="https://www.google.com/maps/place/St.+Xavier+Boys+Academy/@18.9353783,72.8238235,16z/data=!4m6!3m5!1s0x3be7d1e6463a1bfb:0x6aa2603d483baab0!8m2!3d18.9357589!4d72.8280399!16s%2Fg%2F11c4pg2bjf" class="btn btn-primary" aria-label="Location Link">
+          Location
+        </a>
 
         <!-- Optional dark mode toggle -->
         <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
@@ -66,8 +66,8 @@
           <span class="mini-title">IPC Faith City Church</span>
         </div>
         <div class="mini-actions">
-          <button class="btn btn-small btn-ghost" type="button" data-jump="#sermon">Contact</button>
-          <button class="btn btn-small btn-primary" type="button" data-jump="#visit">Directions</button>
+          <button class="btn btn-small btn-ghost" type="button" data-jump="#visit">Contact</button>
+          <button class="btn btn-small btn-primary" type="button" data-jump="#endMap">Location</button>
         </div>
       </div>
     </div>
@@ -180,7 +180,7 @@
       <div class="container">
         <div class="section-head reveal">
           <p class="section-kicker script">Plan Your Visit</p>
-          <h2>Service times and directions</h2>
+          <h2>Service</h2>
         </div>
         <h2></h2>
         <!-- <p class="section-sub">
@@ -205,7 +205,7 @@
                 <p>St. Xaviers Boys Academy Auditorium<br>40-A New Marine Lines 1st Cross Road <br> Churchgate (E), Mumbai</p>
                 <div class="row">
                   <a class="btn btn-primary" href="https://www.google.com/maps?q=123+Main+Street" target="_blank" rel="noopener">
-                    Get Directions
+                    Get Location
                   </a>
                   <button class="btn btn-ghost" type="button" data-jump="#prayer">
                     Request Prayer
@@ -229,7 +229,7 @@
                 <p>St. Xaviers Boys Academy Auditorium<br>40-A New Marine Lines 1st Cross Road <br> Churchgate (E), Mumbai</p>
                 <div class="row">
                   <a class="btn btn-primary" href="https://www.google.com/maps/place/St.+Xavier+Boys+Academy/@18.9353783,72.8238235,16z/data=!4m6!3m5!1s0x3be7d1e6463a1bfb:0x6aa2603d483baab0!8m2!3d18.9357589!4d72.8280399!16s%2Fg%2F11c4pg2bjf" target="_blank" rel="noopener">
-                    Get Directions
+                    Location
                   </a>
                   <a href="mailto:prayers.fcc@gmail.com" class="btn btn-ghost" role="button">
                     Request Prayer
@@ -326,12 +326,26 @@
       <div class="container">
         <div class="section-head reveal">
           <p class="section-kicker script">Join Us</p>
-          <h2>Directions</h2>
+          <h2>Location</h2>
         </div>
 
         <!-- This div becomes an interactive map using Leaflet (loaded via JS) -->
         <div class="card reveal map-leaflet">
-          <div id="leafletMap" class="leaflet-map" role="application" aria-label="Interactive map"></div>
+          <div class="map-clickwrap" aria-label="Open location in Google Maps">
+            <div id="leafletMap" class="leaflet-map" role="application" aria-label="Interactive map"></div>
+        
+            <!-- Click overlay -->
+            <a
+              class="map-overlay-link"
+              href="https://www.google.com/maps/place/St.+Xavier+Boys+Academy/@18.9353783,72.8238235,16z/data=!4m6!3m5!1s0x3be7d1e6463a1bfb:0x6aa2603d483baab0!8m2!3d18.9357589!4d72.8280399!16s%2Fg%2F11c4pg2bjf"
+              target="_blank"
+              rel="noopener"
+              aria-label="Open Google Maps location"
+            ></a>
+        
+            <!-- Optional small hint badge -->
+            <div class="map-hint">Open in Google Maps</div>
+          </div>
         </div>
       </div>
     </section>

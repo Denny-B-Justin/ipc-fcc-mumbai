@@ -516,8 +516,8 @@
       - Uses Leaflet JS/CSS via CDN (no framework)
       - Replace CHURCH_LAT and CHURCH_LNG below
       ========================================= */
-   const CHURCH_LAT = 18.936078550970127;  // <-- replace with your latitude
-   const CHURCH_LNG = 72.8279218786595;  // <-- replace with your longitude
+   const CHURCH_LAT = 18.94;  // <-- replace with your latitude
+   const CHURCH_LNG = 72.83;  // <-- replace with your longitude
    const CHURCH_LABEL = "St. Xavier Boys Academy"; // <-- replace marker label if desired
 
    function loadLeaflet(){
