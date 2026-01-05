@@ -11,7 +11,7 @@
     --muted: #565b67;
   
     --primary: #2f6bff;     /* brand */
-    --accent: #f2b705;      /* warm accent */
+    --accent: #fbb1cd;      /* warm accent */
     --ring: rgba(47, 107, 255, .35);
   
     --shadow: 0 10px 30px rgba(10, 20, 40, .08);
@@ -40,7 +40,7 @@
     --muted: #b8c0d4;
   
     --primary: #6aa0ff;
-    --accent: #ffcc4d;
+    --accent: #fbb1cd;
     --ring: rgba(106, 160, 255, .45);
   
     --shadow: 0 10px 30px rgba(0,0,0,.35);
