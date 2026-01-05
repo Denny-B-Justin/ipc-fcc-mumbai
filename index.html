@@ -1,0 +1,417 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="A modern, welcoming single-page church website." />
+  <title>IPC Faith City Church</title>
+
+  <!-- Fonts: clean sans + tasteful script -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Dancing+Script:wght@500;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Skip link for accessibility -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Top Header (minimal, no tabs) -->
+  <header class="top-header" id="top">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">
+          <!-- Simple cross mark -->
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" role="img" aria-hidden="true">
+            <path d="M11 2h2v7h7v2h-7v11h-2V11H4V9h7V2z" fill="currentColor"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <p class="brand-name">IPC Faith City Church</p>
+          <p class="brand-tagline">A place to belong, grow, and serve.</p>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <button class="btn btn-ghost" type="button" data-jump="#sermon" aria-label="Jump to Watch Live section">
+          Contact
+        </button>
+        <button class="btn btn-primary" type="button" data-jump="#visit" aria-label="Jump to Plan Your Visit section">
+          Directions
+        </button>
+
+        <!-- Optional dark mode toggle -->
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
+          <span class="icon" aria-hidden="true">
+            <!-- moon/sun icon -->
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none">
+              <path d="M21 13.2A8.5 8.5 0 0 1 10.8 3a7 7 0 1 0 10.2 10.2Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Sticky mini header that appears on scroll -->
+    <div class="mini-header" id="miniHeader" aria-hidden="true">
+      <div class="container mini-inner">
+        <div class="mini-left">
+          <span class="mini-dot" aria-hidden="true"></span>
+          <span class="mini-title">IPC Faith City Church</span>
+        </div>
+        <div class="mini-actions">
+          <button class="btn btn-small btn-ghost" type="button" data-jump="#sermon">Contact</button>
+          <button class="btn btn-small btn-primary" type="button" data-jump="#visit">Directions</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-bg__layer is-active" id="heroLayerA"></div>
+        <div class="hero-bg__layer" id="heroLayerB"></div>
+      </div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+
+      <div class="container hero-inner">
+        <div class="hero-copy reveal">
+          <p class="script-kicker">Grace for every season</p>
+          <h1>Come as you are. Find hope, community, and purpose.</h1>
+          <p class="lead">
+            WELCOME TO ALL WHO COME TO MUMBAI FOR JOB/STUDIES
+          </p>
+
+          <!-- <div class="hero-ctas">
+            <button class="btn btn-primary" type="button" data-jump="#visit">Join Us This Sunday</button>
+            <button class="btn btn-ghost" type="button" data-jump="#sermon">Watch Live</button>
+          </div> -->
+
+          <div class="hero-meta" role="list" aria-label="Service times and location">
+            <div class="meta-item" role="listitem">
+              <span class="meta-label">Service Times</span>
+              <span class="meta-value">Sunday 9:30 AM • 12:30 PM</span>
+            </div>
+            <div class="meta-item" role="listitem">
+              <span class="meta-label">Location</span>
+              <span class="meta-value">Churchgate, Mumbai</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="hero-card reveal">
+          <div class="card glass">
+            <p class="card-eyebrow">New here?</p>
+            <h2 class="card-title">Plan your first visit in 2 minutes</h2>
+            <p class="card-text">
+              What to expect, where to park, kids check-in, and how we can welcome you personally.
+            </p>
+            <button class="btn btn-primary" type="button" data-jump="#visit">Plan Your Visit</button>
+            <p class="card-note">Prefer online? Scroll to <button class="linklike" type="button" data-jump="#sermon">Watch Live</button>.</p>
+          </div>
+        </div> -->
+      </div>
+    </section>
+
+    <!-- Welcome / About -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-kicker script">Welcome</p>
+          <h2>We exist to help people encounter Jesus and live transformed lives.</h2>
+          <p class="section-sub">
+            We’re a multi-generational community committed to worship, authentic relationships, and serving our city with compassion.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card reveal">
+            <div class="icon-tile" aria-hidden="true">
+              <!-- worship icon -->
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+                <path d="M12 3v9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M7.5 7.5 12 12l4.5-4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M6 21h12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Worship</h3>
+            <p>We gather to praise God with joy, reverence, and gratitude—centered on Scripture and prayer.</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="icon-tile" aria-hidden="true">
+              <!-- community icon -->
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+                <path d="M16 11a4 4 0 1 0-8 0" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M4 21c1.8-4 4.9-6 8-6s6.2 2 8 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M19 8.5a2.5 2.5 0 1 0-1.6 4.7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Community</h3>
+            <p>You don’t have to walk alone. We grow through friendships, small groups, and shared stories.</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="icon-tile" aria-hidden="true">
+              <!-- service icon -->
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+                <path d="M12 21s7-4.6 7-11a4 4 0 0 0-7-2 4 4 0 0 0-7 2c0 6.4 7 11 7 11Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                <path d="M12 12v3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Service</h3>
+            <p>Faith becomes visible through love in action—meeting needs, bringing hope, and building dignity.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Times + Location -->
+    <section class="section muted" id="visit">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-kicker script">Plan Your Visit</p>
+          <h2>Service times and directions</h2>
+        </div>
+        <h2></h2>
+        <!-- <p class="section-sub">
+          We’ll help you feel comfortable from the moment you arrive.
+        </p> -->
+
+        <div class="split">
+          <div class="reveal">
+            <div class="info-cards">
+              <div class="card">
+                <h3>Sunday Services</h3>
+                <ul class="list">
+                  <li><span>9:30 AM to 10:30 AM</span><span>Sunday School</span></li>
+                  <li><span>10:30 AM to 12:30 PM</span><span>Worship</span></li>
+                </ul>
+                <p class="small muted-text">Holy Communion takes place once a month after the Sunday service.</p>
+                <p class="small muted-text">Youth Meeting (PYPA) is conducted once a month after the Sunday service.</p>
+              </div>
+
+              <!-- <div class="card">
+                <h3>Address</h3>
+                <p>St. Xaviers Boys Academy Auditorium<br>40-A New Marine Lines 1st Cross Road <br> Churchgate (E), Mumbai</p>
+                <div class="row">
+                  <a class="btn btn-primary" href="https://www.google.com/maps?q=123+Main+Street" target="_blank" rel="noopener">
+                    Get Directions
+                  </a>
+                  <button class="btn btn-ghost" type="button" data-jump="#prayer">
+                    Request Prayer
+                  </button>
+                </div>
+              </div> -->
+            </div>
+          </div>
+        <div class="info-cards">
+            <div class="card">
+              <!-- <div class="map-embed card" aria-label="Map to church location">
+                <iframe
+                  title="Map placeholder"
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  src="https://www.google.com/maps?q=New%20Delhi%20India&output=embed"
+                ></iframe> -->
+                <h3>Pastor-in-Charge</h3>
+                <p>Pr. Franklin Francis<br> (+91) 90371 69164</p>
+                <h3>Address</h3>
+                <p>St. Xaviers Boys Academy Auditorium<br>40-A New Marine Lines 1st Cross Road <br> Churchgate (E), Mumbai</p>
+                <div class="row">
+                  <a class="btn btn-primary" href="https://www.google.com/maps/place/St.+Xavier+Boys+Academy/@18.9353783,72.8238235,16z/data=!4m6!3m5!1s0x3be7d1e6463a1bfb:0x6aa2603d483baab0!8m2!3d18.9357589!4d72.8280399!16s%2Fg%2F11c4pg2bjf" target="_blank" rel="noopener">
+                    Get Directions
+                  </a>
+                  <a href="mailto:prayers.fcc@gmail.com" class="btn btn-ghost" role="button">
+                    Request Prayer
+                  </a>
+              </div>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ministries -->
+    <section class="section muted" id="ministries">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-kicker script">Message from Our Pastor</p>
+          <h2>You’re welcome here—just as you are</h2>
+        </div>
+    
+        <div class="pastor-card card reveal">
+          <div class="pastor-media">
+            <img
+              src="src/images/pastor.webp"
+              alt="Photo of the Pastor"
+              loading="lazy"
+            />
+          </div>
+    
+          <div class="pastor-content">
+            <p class="pastor-script">Dear family and friends,</p>
+    
+            <p>
+              We’re glad you’re here. Whether you’re exploring faith for the first time, returning after a long season,
+              or looking for a church home, we want you to know this: <strong>you belong</strong>.
+            </p>
+    
+            <p>
+              Our church is a community of ordinary people learning to follow Jesus—growing through worship,
+              prayer, Scripture, and loving one another in practical ways. We are not perfect, but we are committed
+              to walking together with sincerity, humility, and hope.
+            </p>
+    
+            <p>
+              When you visit, you can expect a warm welcome, Christ-centered teaching, and space to meet people and
+              take your next step—at your pace. If you’d like to speak with someone, request prayer, or learn more
+              about joining our fellowship, we would be honored to help.
+            </p>
+    
+            <p class="pastor-signoff">
+              With love and prayers,<br />
+              <span class="pastor-name">Pastor Franklin Francis</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+    <!-- Photo Gallery -->
+    <section class="section muted" id="gallery">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-kicker script">Gallery</p>
+          <h2>Moments from our community</h2>
+          <p class="section-sub">A glimpse of worship, serving, and life together.</p>
+        </div>
+
+        <div class="gallery-grid" id="galleryGrid">
+          <button class="gallery-item reveal" type="button"
+                  data-full="src/images/gallery1.jpg"
+                  aria-label="Open photo 1 in lightbox">
+            <img loading="lazy" alt="Church gathering"
+                 src="src/images/gallery1.jpg">
+          </button>
+        
+          <button class="gallery-item reveal" type="button"
+                  data-full="src/images/gallery2.jpg"
+                  aria-label="Open photo 2 in lightbox">
+            <img loading="lazy" alt="Worship moment"
+                 src="src/images/gallery2.jpg">
+          </button>
+        
+          <button class="gallery-item reveal" type="button"
+                  data-full="src/images/gallery3.jpg"
+                  aria-label="Open photo 3 in lightbox">
+            <img loading="lazy" alt="Prayer time"
+                 src="src/images/gallery3.jpg">
+          </button>
+        </div>
+        
+    </section>
+
+    <!-- MAP AT THE VERY END (you will input coordinates) -->
+    <section class="section map-end" id="endMap">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-kicker script">Join Us</p>
+          <h2>Directions</h2>
+        </div>
+
+        <!-- This div becomes an interactive map using Leaflet (loaded via JS) -->
+        <div class="card reveal map-leaflet">
+          <div id="leafletMap" class="leaflet-map" role="application" aria-label="Interactive map"></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Reusable modal root -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-backdrop" data-modal-close tabindex="-1"></div>
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" type="button" data-modal-close aria-label="Close modal">
+        <span aria-hidden="true">×</span>
+      </button>
+      <div class="modal-content">
+        <h3 id="modalTitle"></h3>
+        <div id="modalBody"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lightbox modal -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox-backdrop" data-lightbox-close tabindex="-1"></div>
+    <figure class="lightbox-figure" role="dialog" aria-modal="true" aria-label="Image viewer">
+      <button class="lightbox-close" type="button" data-lightbox-close aria-label="Close image viewer">×</button>
+      <img id="lightboxImg" alt="" />
+      <figcaption id="lightboxCaption" class="small muted-text"></figcaption>
+    </figure>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner reveal">
+      <div class="footer-brand">
+        <p class="brand-name">IPC Faith City Church, Churchgate, Mumbai</p>
+        <p class="script footer-blessing">“May you be filled with hope and peace.”</p>
+      </div>
+
+      <div class="footer-meta">
+        <div class="footer-block">
+          <p class="footer-title">Contact</p>
+          <p class="small"><a href="tel:+919037169164">+91 90371 69164</a></p>
+          <p class="small"><a href="mailto:prayers.fcc@gmail.com">prayers.fcc@gmail.com</a></p>
+          <p class="small"> St. Xaviers Boys Academy Auditorium<br>40-A New Marine Lines 1st Cross Road <br> Churchgate (E), Mumbai</p>
+        </div>
+
+      <div class="footer-block">
+        <p class="footer-title">Connect</p>
+        <div class="social">
+          <a class="social-link" href="#" aria-label="Instagram (replace link)">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Z" stroke="currentColor" stroke-width="1.8"/>
+              <path d="M12 16a4 4 0 1 0-4-4 4 4 0 0 0 4 4Z" stroke="currentColor" stroke-width="1.8"/>
+              <path d="M17.5 6.5h.01" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/>
+            </svg>
+          </a>
+          <a class="social-link" href="#" aria-label="YouTube (replace link)">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M21.5 7.2a2.8 2.8 0 0 0-2-2C17.8 4.7 12 4.7 12 4.7s-5.8 0-7.5.5a2.8 2.8 0 0 0-2 2A29 29 0 0 0 2 12a29 29 0 0 0 .5 4.8 2.8 2.8 0 0 0 2 2c1.7.5 7.5.5 7.5.5s5.8 0 7.5-.5a2.8 2.8 0 0 0 2-2A29 29 0 0 0 22 12a29 29 0 0 0-.5-4.8Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+              <path d="M10 15.5v-7l6 3.5-6 3.5Z" fill="currentColor"/>
+            </svg>
+          </a>
+          <a class="social-link" href="#" aria-label="Facebook (replace link)">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M14 8h3V5h-3a4 4 0 0 0-4 4v3H7v3h3v7h3v-7h3l1-3h-4V9a1 1 0 0 1 1-1Z" fill="currentColor"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      </div>
+
+      <p class="copyright small muted-text">
+        © <span id="year"></span> IPC Faith City Church. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
