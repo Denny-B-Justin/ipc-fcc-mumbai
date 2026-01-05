@@ -516,10 +516,10 @@
       - Uses Leaflet JS/CSS via CDN (no framework)
       - Replace CHURCH_LAT and CHURCH_LNG below
       ========================================= */
-   const CHURCH_LAT = 28.6139;  // <-- replace with your latitude
-   const CHURCH_LNG = 77.2090;  // <-- replace with your longitude
-   const CHURCH_LABEL = "Grace Community Church"; // <-- replace marker label if desired
-   
+   const CHURCH_LAT = 18.936078550970127;  // <-- replace with your latitude
+   const CHURCH_LNG = 72.8279218786595;  // <-- replace with your longitude
+   const CHURCH_LABEL = "St. Xavier Boys Academy"; // <-- replace marker label if desired
+
    function loadLeaflet(){
      return new Promise((resolve, reject) => {
        // CSS
@@ -579,4 +579,85 @@
    }
    
    initEndMap();
+
+   /* =========================================
+   HERO BACKGROUND SLIDESHOW (4 images)
+   Place your images in: src/images/
+   Update filenames below to match your files.
+   ========================================= */
+(() => {
+  const layerA = document.getElementById("heroLayerA");
+  const layerB = document.getElementById("heroLayerB");
+  if (!layerA || !layerB) return;
+
+  // ✅ CHANGE THESE FILENAMES to your real image names:
+  const slides = [
+    "src/images/1.webp",
+    "src/images/2.webp",
+    "src/images/3.webp",
+  ];
+
+  // If you use .png/.webp etc, update accordingly.
+  // Example: "src/images/hero-1.png"
+
+  const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // Preload for smoother switching
+  slides.forEach((src) => {
+    const img = new Image();
+    img.src = src;
+  });
+
+  let index = 0;
+  let useA = true;
+  let timer = null;
+
+  // Set initial image
+  layerA.style.backgroundImage = `url("${slides[0]}")`;
+  layerA.classList.add("is-active");
+  layerB.classList.remove("is-active");
+
+  function nextSlide() {
+    index = (index + 1) % slides.length;
+
+    const nextSrc = slides[index];
+    const active = useA ? layerA : layerB;
+    const incoming = useA ? layerB : layerA;
+
+    // Set incoming image first, then fade it in
+    incoming.style.backgroundImage = `url("${nextSrc}")`;
+
+    // If reduced motion: just swap instantly
+    if (prefersReduced) {
+      active.classList.remove("is-active");
+      incoming.classList.add("is-active");
+      useA = !useA;
+      return;
+    }
+
+    incoming.classList.add("is-active");
+    active.classList.remove("is-active");
+    useA = !useA;
+  }
+
+  function start() {
+    if (timer) return;
+    timer = setInterval(nextSlide, 6000); // change every 6 seconds
+  }
+
+  function stop() {
+    clearInterval(timer);
+    timer = null;
+  }
+
+  // Pause slideshow when tab not visible
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) stop();
+    else start();
+  });
+
+  // Start slideshow
+  start();
+})();
+
    
