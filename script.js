@@ -592,9 +592,9 @@
 
   // ✅ CHANGE THESE FILENAMES to your real image names:
   const slides = [
-    "src/images/1.webp",
-    "src/images/2.webp",
-    "src/images/3.webp",
+    "src/images/front_new1.jpeg",
+    "src/images/front_new2.jpeg",
+    "src/images/front_new3.jpeg",
   ];
 
   // If you use .png/.webp etc, update accordingly.
