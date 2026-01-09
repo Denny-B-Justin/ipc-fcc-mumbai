@@ -597,7 +597,7 @@
     "src/images/front_new3.jpeg",
   ];
 
-  // If you use .png/.webp etc, update accordingly.
+  // If you use .png/.jpg etc, update accordingly.
   // Example: "src/images/hero-1.png"
 
   const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
