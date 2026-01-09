@@ -1,6 +1,6 @@
 <!-- index.html -->
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -12,10 +12,8 @@
   <!-- Fonts: clean sans + tasteful script -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Dancing+Script:wght@500;700&display=swap"
-    rel="stylesheet"
-  >
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@400;600;700&family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -28,15 +26,14 @@
   <header class="top-header" id="top">
     <div class="container header-inner">
       <div class="brand">
-        <div class="brand-mark" aria-hidden="true">
-          <!-- Simple cross mark -->
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" role="img" aria-hidden="true">
-            <path d="M11 2h2v7h7v2h-7v11h-2V11H4V9h7V2z" fill="currentColor"/>
-          </svg>
-        </div>
         <div class="brand-text">
-          <p class="brand-name">IPC Faith City Church</p>
-          <p class="brand-tagline">Churchgate, Mumbai</p>
+          <p class="brand-name">
+            <img
+              src="src/images/church_logo.png"
+              alt="Logo"
+              loading="lazy"
+            />
+          </p>
         </div>
       </div>
 
@@ -49,14 +46,14 @@
         </a>
 
         <!-- Optional dark mode toggle -->
-        <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
-          <span class="icon" aria-hidden="true">
+        <!-- <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
+          <span class="icon" aria-hidden="true"> -->
             <!-- moon/sun icon -->
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="none">
+            <!-- <svg viewBox="0 0 24 24" width="20" height="20" fill="none">
               <path d="M21 13.2A8.5 8.5 0 0 1 10.8 3a7 7 0 1 0 10.2 10.2Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </span>
-        </button>
+        </button> -->
       </div>
     </div>
 
@@ -64,8 +61,14 @@
     <div class="mini-header" id="miniHeader" aria-hidden="true">
       <div class="container mini-inner">
         <div class="mini-left">
-          <span class="mini-dot" aria-hidden="true"></span>
-          <span class="mini-title">IPC Faith City Church</span>
+          <!-- <span class="mini-dot" aria-hidden="true"></span> -->
+          <span class="mini-title">
+            <img
+              src="src/images/church_logo.png"
+              alt="Logo"
+              loading="lazy"
+            />
+          </span>
         </div>
         <div class="mini-actions">
           <button class="btn btn-small btn-ghost" type="button" data-jump="#visit">Contact</button>
@@ -200,7 +203,7 @@
         <div class="pastor-card card reveal">
           <div class="pastor-media">
             <img
-              src="src/images/pastor.webp"
+              src="src/images/pastor.jpg"
               alt="Photo of the Pastor"
               loading="lazy"
             />
@@ -247,25 +250,49 @@
 
         <div class="gallery-grid" id="galleryGrid">
           <button class="gallery-item reveal" type="button"
-                  data-full="src/images/gallery1.jpg"
+                  data-full="src/images/gala_1.jpeg"
                   aria-label="Open photo 1 in lightbox">
             <img loading="lazy" alt="Church gathering"
-                 src="src/images/gallery1.jpg">
+                 src="src/images/gala_1.jpeg">
           </button>
         
           <button class="gallery-item reveal" type="button"
-                  data-full="src/images/gallery2.jpg"
+                  data-full="src/images/gala_2.jpg"
                   aria-label="Open photo 2 in lightbox">
-            <img loading="lazy" alt="Worship moment"
-                 src="src/images/gallery2.jpg">
+            <img loading="lazy" alt="Church Tour"
+                 src="src/images/gala_2.jpg">
           </button>
         
           <button class="gallery-item reveal" type="button"
-                  data-full="src/images/gallery3.jpg"
+                  data-full="src/images/gala_3.jpeg"
                   aria-label="Open photo 3 in lightbox">
-            <img loading="lazy" alt="Prayer time"
-                 src="src/images/gallery3.jpg">
+            <img loading="lazy" alt="Talent Test"
+                 src="src/images/gala_3.jpeg">
           </button>
+          <button class="gallery-item reveal" type="button"
+                  data-full="src/images/gala_4.jpg"
+                  aria-label="Open photo 4 in lightbox">
+            <img loading="lazy" alt="Church Tour"
+                 src="src/images/gala_4.jpg">
+          </button>
+          <button class="gallery-item reveal" type="button"
+                  data-full="src/images/gala_5.jpg"
+                  aria-label="Open photo 5 in lightbox">
+            <img loading="lazy" alt="Church visit"
+                 src="src/images/gala_5.jpg">
+          </button>
+          <button class="gallery-item reveal" type="button"
+                  data-full="src/images/gala_6.jpeg"
+                  aria-label="Open photo 6 in lightbox">
+            <img loading="lazy" alt="Church gathering"
+                 src="src/images/gala_6.jpeg">
+          </button>
+          <!-- <button class="gallery-item reveal" type="button"
+                  data-full="src/images/gala_7.jpg"
+                  aria-label="Open photo 7 in lightbox">
+            <img loading="lazy" alt="Prayer time"
+                 src="src/images/gala_7.jpg">
+          </button> -->
         </div>
         
     </section>
@@ -353,7 +380,7 @@
               <path d="M17.5 6.5h.01" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/>
             </svg>
           </a>
-          <a class="social-link" href="#" aria-label="YouTube (replace link)">
+          <a class="social-link" href="https://youtube.com/@faithcitychurchmumbai" aria-label="YouTube (replace link)">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <path d="M21.5 7.2a2.8 2.8 0 0 0-2-2C17.8 4.7 12 4.7 12 4.7s-5.8 0-7.5.5a2.8 2.8 0 0 0-2 2A29 29 0 0 0 2 12a29 29 0 0 0 .5 4.8 2.8 2.8 0 0 0 2 2c1.7.5 7.5.5 7.5.5s5.8 0 7.5-.5a2.8 2.8 0 0 0 2-2A29 29 0 0 0 22 12a29 29 0 0 0-.5-4.8Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
               <path d="M10 15.5v-7l6 3.5-6 3.5Z" fill="currentColor"/>
