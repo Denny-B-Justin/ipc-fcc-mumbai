@@ -885,6 +885,7 @@
     background: var(--surface);
     cursor: pointer;
     font-size: 22px;
+    color: #ffffff;
   }
   
   .lightbox img{
